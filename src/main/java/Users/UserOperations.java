@@ -1,16 +1,8 @@
 package Users;
 
-import com.google.code.morphia.Datastore;
-import com.google.code.morphia.Morphia;
-import com.mongodb.Mongo;
 import com.mongodb.MongoException;
 import com.mongodb.WriteConcern;
-import models.LoginCredentials;
 import models.User;
-import models.UserDetails;
-import java.net.UnknownHostException;
-import java.util.List;
-import java.util.Locale;
 
 public abstract class UserOperations {
 
