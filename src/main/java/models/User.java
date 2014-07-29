@@ -18,5 +18,9 @@ public class User {
         this.loginCredentials = new LoginCredentials(emailId, passwd);
         this.userDetails = new UserDetails(fname, lname);
     }
+
+    public User(){
+
+    }
 }
 

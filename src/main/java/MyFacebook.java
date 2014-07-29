@@ -1,7 +1,7 @@
 import com.yammer.dropwizard.Service;
 import com.yammer.dropwizard.config.Bootstrap;
 import com.yammer.dropwizard.config.Environment;
-import endPoints.LogInResources;
+import endPoints.UserResources;
 
 public class MyFacebook extends Service<MyFacebookConfiguration> {
 
@@ -16,6 +16,6 @@ public class MyFacebook extends Service<MyFacebookConfiguration> {
 
     @Override
     public void run(MyFacebookConfiguration myFacebookConfiguration, Environment environment) throws Exception {
-        environment.addResource(new LogInResources());
+        environment.addResource(new UserResources());
     }
 }

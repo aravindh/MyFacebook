@@ -15,4 +15,8 @@ public class LoginCredentials {
         this.passwd = passwd;
     }
 
+    public LoginCredentials(){
+
+    }
+
 }

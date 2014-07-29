@@ -1,4 +1,4 @@
-package Users;
+package config;
 
 import com.google.code.morphia.Datastore;
 import com.google.code.morphia.Morphia;
@@ -7,7 +7,6 @@ import models.LoginCredentials;
 import models.User;
 import models.UserDetails;
 
-import javax.xml.crypto.Data;
 import java.net.UnknownHostException;
 
 public class Mongodb {
@@ -23,9 +22,9 @@ public class Mongodb {
             Mongo mongo = new Mongo("localhost");
             Morphia morphia = new Morphia();
             dbName = "MyFacebook";
-            //morphia.mapPackage("models");
-            morphia.map(User.class).map(LoginCredentials.class);
-            morphia.map(User.class).map(UserDetails.class);
+            morphia.mapPackage("models");
+            //morphia.map(User.class).map(LoginCredentials.class);
+            //morphia.map(User.class).map(UserDetails.class);
             datastore = morphia.createDatastore(mongo, dbName);
             //datastore.ensureIndexes();
         } catch (UnknownHostException e) {
